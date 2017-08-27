@@ -7,6 +7,11 @@ export default mongoose.model('CharitableEntity', new Schema({
     default: '',
     required: 'Please fill name'
   },
+  director: {
+    type: String,
+    default: '',
+    required: 'Please fill director'
+  },
   type: {
     type: String,
     default: '',
@@ -22,7 +27,7 @@ export default mongoose.model('CharitableEntity', new Schema({
     default: '',
     required: 'Please fill state'
   },
-  postaladdress: {
+  postal_address: {
     type: String,
     default: '',
     required: 'Please fill postaladdress'
