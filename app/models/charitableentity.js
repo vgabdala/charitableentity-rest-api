@@ -7,6 +7,11 @@ export default mongoose.model('CharitableEntity', new Schema({
     default: '',
     required: 'Please fill name'
   },
+  description: {
+    type: String,
+    default: '',
+    required: 'Please fill description'
+  },
   director: {
     type: String,
     default: '',

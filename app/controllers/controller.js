@@ -6,6 +6,7 @@ export function createEntity(req, res){
 	if(validateRequest(req, res)){
 		var newCharitableEntity = new CharitableEntity({
         name: req.body.name,
+        description: req.body.description,
         director: req.body.director,
         est_date: req.body.est_date,
         type: req.body.type,
@@ -76,6 +77,11 @@ function validateRequest(req, res){
 
   if(req.body.name == null || req.body.name == ''){
     res.json({ success: false, message: 'Fail. name must be provided.' });
+    return false;
+  } 
+
+  if(req.body.description == null || req.body.description == ''){
+    res.json({ success: false, message: 'Fail. description must be provided.' });
     return false;
   } 
 
