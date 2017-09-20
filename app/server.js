@@ -26,13 +26,13 @@ app.use(bodyParser.json())
 app.use(morgan('dev'))
 
 // Start server
-app.get('/', function(req, res) {
-    res.send(`The API is available on '/api'`)
+app.get('/entity-service', function(req, res) {
+    res.send(`charitableentity-rest-api`)
 });
 
-app.use('/api', routes)
+app.use('/entity-service', routes)
 
-const port = process.env.NODE_PORT || 8081
+const port = 8082
 app.listen(port)
 
 console.log(`charitableentity-rest-api is running on ${env} environment on port ${port}`)
